@@ -2,19 +2,26 @@ body,
 html {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
   background-color: #fff;
 }
 
-.navbar {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  background-color: #2c3e50;
-  z-index: 1000;
-  border: none; /* Remover borda */
+/* Adiciona padding ao conteúdo principal para evitar sobreposição do menu */
+.main-content {
+  padding-top: 50px; /* Define a altura do padding de acordo com a altura do menu */
 }
 
+/* Estilos para o menu */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #2C3E50;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra ao menu */
+}
+
+/* Estilos para o conteúdo do menu */
 .navbar-content {
   display: flex;
   align-items: center;
@@ -22,12 +29,14 @@ html {
   padding: 0 20px;
 }
 
+/* Estilos para o logo */
 .logo img {
   height: 50px;
   margin-right: 20px;
   margin-top: 5px;
 }
 
+/* Estilos para o menu */
 .menu {
   list-style: none;
   margin: 0;
@@ -68,12 +77,13 @@ html {
   width: 100%;
 }
 
+/* Estilos para submenus */
 .sub-menu {
   display: none;
   position: absolute;
-  background-color: #34495e;
+  background-color: #34495E;
   min-width: 160px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
   z-index: 1;
   list-style: none;
   padding: 0;
@@ -107,6 +117,7 @@ html {
   position: absolute;
 }
 
+/* Estilos para o menu hamburguer */
 .hamburger-menu {
   display: none;
   flex-direction: column;
@@ -121,6 +132,7 @@ html {
   transition: 0.4s;
 }
 
+/* Estilos para dispositivos móveis */
 @media screen and (max-width: 1160px) {
   .navbar-content {
     flex-direction: row;
@@ -229,7 +241,7 @@ footer {
 .footer-language {
   margin: 5px 0;
   text-align: left;
-  font-size: 1.5vw; /* Tamanho da fonte relativo à largura da janela */
+  font-size: clamp(14px, 1.5vw, 18px);
   line-height: 1.4;
 }
 
@@ -248,10 +260,12 @@ footer {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  font-size: clamp(15px, 1vw, 14px);
 }
 
 .footer-bottom p {
   margin: 0;
+  font-size: clamp(8px, 2vw, 12px);
 }
 
 .footer-social a {
@@ -287,7 +301,7 @@ footer {
   .footer-phone,
   .footer-email,
   .footer-language {
-    font-size: 2vw; /* Diminuir tamanho do texto */
+    font-size: clamp(12px, 2vw, 16px);
   }
 
   .footer-left,
@@ -329,10 +343,110 @@ footer {
   .footer-phone,
   .footer-email,
   .footer-language {
-    font-size: 3vw; /* Diminuir tamanho do texto */
+    font-size: clamp(10px, 3vw, 14px);
   }
 
   .footer-bottom {
-    font-size: 2vw;
+    font-size: clamp(8px, 2vw, 12px);
+  }
+}
+
+/* INDEX */
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #e0f7fa; /* Fallback color */
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  color: #000;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  margin: 0.5em 0;
+  color: black;
+}
+
+.hero h2 {
+  font-size: 3em;
+  margin: 0.5em 0;
+  color: white;
+  text-shadow: 4px 4px 0 #002566, 2px 4px 0 #002566, 4px 2px 0 #002566,
+    2px 2px 0 #002566;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 30px;
+  text-decoration: none;
+  background-color: #1a237e;
+
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+  font-size: 1.4em;
+  position: relative;
+  overflow: hidden;
+  background: url("../../assets/brasil.png") no-repeat center center;
+  background-size: cover; /* Ajusta a imagem de fundo para cobrir todo o botão */
+}
+
+.cta-button span {
+  position: relative;
+  z-index: 2; /* Para que o texto fique acima da imagem */
+  color: white;
+  text-shadow: 4px 4px 0 #002566, 2px 4px 0 #002566, 4px 2px 0 #002566,
+    2px 2px 0 #002566;
+  font-weight: bold;
+}
+
+.cta-button:hover {
+  background-color: #0d47a1;
+}
+
+.cta-icon {
+  width: 24px; /* Ajustar o tamanho da imagem */
+  height: 24px; /* Ajustar o tamanho da imagem */
+  margin-right: 10px; /* Espaço entre a imagem e o texto */
+  opacity: 0.8; /* Transparência */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .cta-button {
+    font-size: 1em;
+    padding: 12px 24px;
+    font-weight: bold;
+  }
+
+  .cta-icon {
+    width: 20px; /* Ajustar o tamanho da imagem para dispositivos menores */
+    height: 20px; /* Ajustar o tamanho da imagem para dispositivos menores */
+    margin-right: 8px; /* Espaço entre a imagem e o texto */
   }
 }
