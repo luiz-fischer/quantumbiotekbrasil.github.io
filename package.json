@@ -1,0 +1,9 @@
+{
+  "name": "quantumbiotekbrasil",
+  "version": "1.0.0",
+  "description": "Project of quantum biotek brasil",
+  "main": "index.js",
+  "author": "Luiz Fischer <luiz-fischer@hotmail.com>",
+  "license": "MIT",
+  "private": true
+}
