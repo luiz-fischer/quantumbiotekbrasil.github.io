@@ -463,12 +463,13 @@ footer {
   justify-content: center;
   padding: 15px 30px;
   text-decoration: none;
-  background-color: #1a73e8;
+  background-color: #155ab5;
   color: white;
   border-radius: 30px;
   margin-top: 20px;
   transition: background-color 0.3s ease;
   font-size: 1.4em;
+  
 }
 
 .custom-cta-button:hover {
@@ -762,7 +763,7 @@ footer {
 
 .water-structuring-section h1 {
   font-size: 2.2em;
-  color: #005cbf; /* Cor do título */
+  color: #0072bc; /* Cor do título */
   text-align: center;
 }
 
@@ -779,6 +780,70 @@ footer {
   max-width: 100%;
   margin-bottom: 3%;
   height: auto;
+}
+
+.installation-scheme-section {
+  padding: 50px 20px;
+  background-color: #005cbf; /* Cor de fundo ajustada */
+  text-align: center;
+  color: white;
+}
+
+.installation-scheme-section h1 {
+  font-size: 2.5em;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.installation-scheme-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  margin-bottom: 5%;
+  margin-top: 5%;
+}
+
+.installation-scheme-left {
+  flex: 1;
+  text-align: center;
+}
+
+.installation-scheme-left img {
+  max-width: 65%;
+  height: auto;
+}
+
+.installation-scheme-right {
+  flex: 1;
+  color: white;
+  margin-right: 2vw;
+}
+
+.installation-scheme-right h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.installation-scheme-right p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.contact-button {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 1em;
+  color: #0072bc;
+  background-color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+}
+
+.contact-button:hover {
+  background-color: #ddd;
 }
 
 /* Responsividade */
@@ -934,6 +999,20 @@ footer {
   .image-content img {
     max-width: 80%; /* Ajustar largura da imagem para telas menores */
   }
+
+  /* OMNIAMBIENTE */
+  .installation-scheme-content {
+    flex-direction: column;
+  }
+
+  .installation-scheme-right {
+    padding-left: 0;
+  }
+
+  .cta-button {
+    font-size: 0.9em;
+    padding: 12px 24px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -959,5 +1038,4 @@ footer {
     width: calc(50% - 20px); /* 2 cards por linha em telas menores */
     height: 100%;
   }
-
 }
