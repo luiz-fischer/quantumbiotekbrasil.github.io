@@ -716,7 +716,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #197ec2; /* Ajuste para o tom de azul correto */
+  background-color: #007cc3; /* Ajuste para o tom de azul correto */
   padding: 50px 20px;
   color: white;
 }
@@ -762,7 +762,7 @@ footer {
 
 .water-structuring-section h1 {
   font-size: 2.2em;
-  color: #197ec2; /* Cor do título */
+  color: #007cc3; /* Cor do título */
   text-align: center;
 }
 
@@ -783,7 +783,7 @@ footer {
 
 .installation-scheme-section {
   padding: 50px 20px;
-  background-color: #005cbf; /* Cor de fundo ajustada */
+  background-color: #007cc3; /* Cor de fundo ajustada */
   text-align: center;
   color: white;
 }
@@ -833,7 +833,7 @@ footer {
   display: inline-block;
   padding: 15px 30px;
   font-size: 1em;
-  color: #197ec2;
+  color: #007cc3;
   background-color: #fff;
   text-decoration: none;
   border-radius: 5px;
@@ -865,7 +865,7 @@ footer {
 
 .testimonial-button {
   display: inline-block;
-  background-color: #197ec2;
+  background-color: #007cc3;
   color: white;
   padding: 0.5vw 12vw;
   font-size: 1em;
