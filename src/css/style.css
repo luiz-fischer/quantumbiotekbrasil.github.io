@@ -190,6 +190,8 @@ footer {
   color: #333;
   padding: 40px 0;
   text-align: center;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 .footer-content {
@@ -242,7 +244,6 @@ footer {
   margin: 5px 0;
   text-align: left;
   font-size: clamp(14px, 1.5vw, 18px);
-  line-height: 1.4;
 }
 
 .footer-email a {
@@ -260,7 +261,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  font-size: clamp(15px, 1vw, 14px);
+  /* font-size: clamp(15px, 1vw, 14px); */
 }
 
 .footer-bottom p {
@@ -382,6 +383,7 @@ footer {
   text-align: center;
   color: #000;
 }
+
 .hero h1 {
   font-size: 2.5em;
   margin: 0.5em 0;
@@ -500,8 +502,8 @@ footer {
 }
 
 .cards-wrapper {
-  margin-left: 20vw;
-  margin-right: 20vw;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 .cards-container {
@@ -510,12 +512,13 @@ footer {
   justify-content: center;
   gap: 20px;
   padding: 20px;
+  /* margin-left: 100px; */
 }
 
 .card {
   background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
   padding: 20px;
   width: calc(33.33% - 20px); /* Ajusta a largura para 3 cards por linha */
@@ -526,8 +529,8 @@ footer {
 }
 
 .card img {
-  width: 100px; /* Ajuste conforme necessário */
-  height: 100px; /* Ajuste conforme necessário */
+  width: auto; /* Ajusta a largura da imagem */
+  height: 150px; /* Aumenta a altura da imagem */
   margin-bottom: 10px; /* Espaço entre a imagem e o texto */
 }
 
@@ -541,7 +544,7 @@ footer {
 }
 
 .card-link::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
   bottom: 0;
@@ -556,7 +559,249 @@ footer {
   left: 0;
 }
 
+.company-section {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.company-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.company-buttons {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+
+.company-button {
+  display: block;
+  text-align: center;
+  background-color: #8bc34a; /* Cor de fundo dos botões */
+  color: #fff; /* Cor do texto dos botões */
+  text-decoration: none;
+  padding: 15px 20px;
+  margin-bottom: 25px;
+  border-radius: 25px;
+  width: 20vw; /* Define o tamanho dos botões */
+  font-size: 18px; /* Ajusta o tamanho do texto dos botões */
+}
+
+.company-button:hover {
+  background-color: #7cb342; /* Cor dos botões ao passar o mouse */
+}
+
+.company-image img {
+  width: 30vw; /* Ajusta o tamanho da imagem */
+  height: auto;
+  max-width: 100%;
+}
+
+.company-section h1 {
+  font-size: 3vw;
+  color: #7cb342;
+}
+
+.stats-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 100px 0;
+}
+
+.stat {
+  text-align: center;
+  flex: 1;
+  padding: 0 20px;
+  margin: 0 10px;
+  box-sizing: border-box;
+}
+
+.stat h2 {
+  font-size: 3em;
+  margin: 0 0 20px;
+  font-weight: bold;
+}
+
+.stat h3 {
+  color: #b1d659;
+  margin: 0 0 15px;
+}
+
+.stat p {
+  margin: 0;
+  font-size: 1em;
+  color: #666;
+}
+
+.devices-section {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.devices-section h1 {
+  font-size: 2.5em;
+  color: #b1d659;
+  margin-bottom: 50px;
+}
+
+.devices-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.devices-container .card {
+  flex: 1 1 calc(25% - 20px); /* Ajusta a largura para 4 cards por linha */
+  max-width: calc(
+    25% - 20px
+  ); /* Ajusta a largura máxima para 4 cards por linha */
+}
+
+.card:hover {
+  transform: scale(1.08);
+}
+
+.badge-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url("../../assets/Naturaleza-quantum-biotek-agua-estructurada.jpg")
+    no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  padding: 0 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.badge-content {
+  margin-top: 5%;
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  width: 80%;
+  max-width: 100%;
+  color: white;
+  text-align: left;
+  transform: translateY(-50%);
+}
+
+.badge-content h1 {
+  font-size: 2vw; /* Ajustar o tamanho da fonte */
+  max-width: 100%;
+}
+
+.badge-content p {
+  font-size: 1.5vw;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  max-width: 60%;
+}
+
+.badge-content img {
+  max-height: 12vw; /* Aumenta a altura máxima dos certificados */
+  width: 40%;
+  margin-top: 20px; /* Espaço entre o parágrafo e os certificados */
+}
+
+/* OMNIAMBIENTE */
+.feature-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #0072bc; /* Ajuste para o tom de azul correto */
+  padding: 50px 20px;
+  color: white;
+}
+
+.text-content {
+  flex: 1;
+  margin-left: 10%;
+  padding-right: 20px;
+}
+
+.text-content h1,
+.text-content h2 {
+  margin: 0;
+  color: #b1d659; /* Cor do texto Omnienviro */
+}
+
+.text-content h1 {
+  font-size: 3vw; /* Use vw para tamanho de fonte responsivo */
+  color: white;
+  margin-bottom: 10px;
+}
+
+.text-content h2 {
+  font-size: 2.5vw; /* Use vw para tamanho de fonte responsivo */
+  color: #b1d659; /* Cor do texto Omnienviro */
+}
+
+.image-content {
+  flex: 1;
+  margin-right: 10%;
+  text-align: center;
+}
+
+.image-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.water-structuring-section {
+  text-align: center;
+  margin-top: 3vw;
+}
+
+.water-structuring-section h1 {
+  font-size: 2.2em;
+  color: #005cbf; /* Cor do título */
+  text-align: center;
+}
+
+.water-structuring-section p {
+  font-size: 1em;
+  color: #333;
+  line-height: 1.5;
+  max-width: 100%;
+  text-align: left;
+  margin: 0 auto 40px auto;
+}
+
+.water-structuring-section .device-image {
+  max-width: 100%;
+  margin-bottom: 3%;
+  height: auto;
+}
+
 /* Responsividade */
+@media (max-width: 1024px) {
+  .card img {
+    width: auto; /* Ajusta a largura da imagem */
+    height: 150px; /* Aumenta a altura da imagem */
+    margin-bottom: 10px; /* Espaço entre a imagem e o texto */
+  }
+
+  .card p {
+    margin-top: 10px;
+    font-size: 1em;
+    color: #000;
+  }
+
+  .devices-container .card {
+    max-width: 100%;
+    width: calc(50% - 20px); /* 2 cards por linha em telas menores */
+    height: 100%;
+  }
+}
+
 @media (max-width: 768px) {
   .content-section {
     flex-direction: column;
@@ -593,12 +838,126 @@ footer {
   }
 
   .card {
-    width: calc(50% - 40px); /* 2 cards por linha em telas menores */
+    width: calc(50% - 20px); /* 2 cards por linha em telas menores */
+    max-width: calc(50% - 20px);
+  }
+
+  /* .card img {
+    max-width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+  } */
+
+  .card p {
+    margin-top: 10px;
+    font-size: 1em;
+    color: #000;
+  }
+
+  .devices-container .card {
+    max-width: 100%;
+    width: calc(50% - 20px); /* 2 cards por linha em telas menores */
+    height: 100%;
+  }
+
+  .company-content {
+    flex-direction: column;
+  }
+
+  .company-buttons {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .company-button {
+    width: 100%; /* Define o tamanho dos botões para 100% em telas menores */
+  }
+
+  .stats-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stat {
+    margin-bottom: 40px;
+    padding: 0 20px;
+  }
+
+  .stat h2 {
+    font-size: 2em;
+  }
+
+  .stat p {
+    font-size: 0.9em;
+  }
+
+  .devices-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .badge-content h1 {
+    font-size: 6vw;
+  }
+
+  .badge-content p {
+    font-size: 3vw;
+  }
+
+  .certifications img {
+    max-height: 6vh;
+  }
+
+  .badge-content h1 {
+    font-size: 4vw;
+  }
+
+  .badge-content p {
+    font-size: 2.5vw;
+  }
+
+  .feature-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-content {
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .text-content h1,
+  .text-content h2 {
+    font-size: 5vw; /* Ajustar tamanho da fonte para telas menores */
+  }
+
+  .image-content img {
+    max-width: 80%; /* Ajustar largura da imagem para telas menores */
   }
 }
 
 @media (max-width: 480px) {
   .card {
-      width: 100%; /* 1 card por linha em telas muito pequenas */
+    width: calc(50% - 20px); /* 2 cards por linha em telas menores */
+    max-width: calc(50% - 20px);
   }
+
+  /* .card img {
+    max-width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+  } */
+
+  .card p {
+    margin-top: 10px;
+    font-size: 1em;
+    color: #000;
+  }
+
+  .devices-container .card {
+    max-width: 100%;
+    width: calc(50% - 20px); /* 2 cards por linha em telas menores */
+    height: 100%;
+  }
+
 }
