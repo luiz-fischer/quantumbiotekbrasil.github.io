@@ -20,7 +20,7 @@ function getBasePath() {
   if (pathSegments[pathSegments.length - 1] === "produtos") {
     pathSegments.pop();
   }
-  
+
   if (pathSegments[pathSegments.length - 1] === "setores") {
     pathSegments.pop();
   }

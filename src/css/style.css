@@ -132,6 +132,43 @@ html {
   transition: 0.4s;
 }
 
+/* NOTICIAS */
+.video-section {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 80%;
+  margin: auto;
+}
+
+.video-section h1 {
+  font-size: 2.5em;
+  color: #4caf50;
+  margin-bottom: 10px;
+}
+
+.video-section p {
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.video-container video {
+  width: 100%;
+  max-width: 1348px;
+  height: auto;
+  border: none;
+}
+
 /* Estilos para dispositivos móveis */
 @media screen and (max-width: 1160px) {
   .navbar-content {
@@ -390,36 +427,36 @@ footer {
   .footer-bottom {
     font-size: clamp(8px, 2vw, 12px);
   }
-  
+
   /* CONTATO */
   .form-wrapper {
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
   }
-  
+
   .form-header {
     width: 100%;
     max-width: 700px;
     text-align: left;
     margin-bottom: 20px;
   }
-  
+
   .form-header h2 {
     margin: 0;
   }
-  
+
   .form-container {
     width: 100%;
     text-align: left;
   }
-  
+
   form {
     display: flex;
     max-width: 500px;
     flex-direction: column;
   }
-  
+
   form input,
   form textarea {
     width: 100%;
@@ -428,7 +465,7 @@ footer {
     border: 1px solid #ddd;
     border-radius: 5px;
   }
-  
+
   .form-button {
     background-color: #8bc34a;
     color: white;
@@ -441,22 +478,21 @@ footer {
     width: 100%;
     margin-top: 10px;
   }
-  
+
   form button:hover {
     background-color: #7cb342;
   }
-  
+
   .contact-logo {
     margin-top: 50px;
     text-align: center;
     margin: 20px 0; /* Adiciona margem em torno da logo */
   }
-  
+
   .contact-logo img {
     max-width: 100%;
     height: auto;
   }
-  
 
   .contact-content h1 {
     font-size: 2.5em;
@@ -469,7 +505,6 @@ footer {
   .contact-certification-content p {
     font-size: 1.2em;
   }
-
 }
 
 /* INDEX */
@@ -1107,7 +1142,6 @@ form textarea {
   margin-top: 10px; /* Adiciona margem superior */
 }
 
-
 form button:hover {
   background-color: #7cb342;
 }
@@ -1170,7 +1204,6 @@ form button:hover {
   margin: 10px 0 20px;
   max-width: 20vw;
 }
-
 
 @media (max-width: 768px) {
   .content-section {
@@ -1382,7 +1415,7 @@ form button:hover {
     width: calc(50% - 20px); /* 2 cards por linha em telas menores */
     height: 100%;
   }
-  
+
   /* CONTATO */
   .contact {
     flex-direction: column;
