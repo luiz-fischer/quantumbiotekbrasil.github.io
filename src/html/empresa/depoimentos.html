@@ -6,55 +6,377 @@
     <link rel="stylesheet" href="../../css/style.css" />
     <link
       rel="shortcut icon"
-      href="../../../../assets/AvRecurso-2.png"
+      href="../../../assets/AvRecurso-2.png"
       type="image/x-icon"
     />
-    <title>Depoimentos - Quantum Biotek Brasil</title>
+    <title>Omniambiente - Quantum Biotek Brasil</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: inherit;
+      }
+
+      html {
+        font-size: 62.5%;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        font-weight: 300;
+        color: #444;
+        line-height: 1.9;
+        background-color: #f3f3f3;
+      }
+      /* SLIDER */
+      .slider {
+        max-width: 100rem;
+        height: 50rem;
+        margin: 0 auto;
+        position: relative;
+
+        /* IN THE END */
+        overflow: hidden;
+      }
+
+      .slide {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 50rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        /* THIS creates the animation! */
+        transition: transform 1s;
+      }
+
+      .slide > img {
+        /* Only for images that have different size than slide */
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .slider__btn {
+        position: absolute;
+        top: 50%;
+        z-index: 10;
+
+        border: none;
+        background: rgba(255, 255, 255, 0.7);
+        font-family: inherit;
+        color: #333;
+        border-radius: 50%;
+        height: 5.5rem;
+        width: 5.5rem;
+        font-size: 3.25rem;
+        cursor: pointer;
+      }
+
+      .slider__btn--left {
+        left: 6%;
+        transform: translate(-50%, -50%);
+      }
+
+      .slider__btn--right {
+        right: 6%;
+        transform: translate(50%, -50%);
+      }
+
+      .dots {
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+      }
+
+      .dots__dot {
+        border: none;
+        background-color: #b9b9b9;
+        opacity: 0.7;
+        height: 1rem;
+        width: 1rem;
+        border-radius: 50%;
+        margin-right: 1.75rem;
+        cursor: pointer;
+        transition: all 0.5s;
+
+        /* Only necessary when overlying images */
+        /* box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.7); */
+      }
+
+      .dots__dot:last-child {
+        margin: 0;
+      }
+
+      .dots__dot--active {
+        /* background-color: #fff; */
+        background-color: #888;
+        opacity: 1;
+      }
+
+      /* TESTIMONIALS */
+      .testimonial {
+        width: 65%;
+        position: relative;
+      }
+
+      .testimonial::before {
+        content: "\201C";
+        position: absolute;
+        top: -5.7rem;
+        left: -6.8rem;
+        line-height: 1;
+        font-size: 20rem;
+        font-family: inherit;
+        color: var(--color-primary);
+        z-index: -1;
+      }
+
+      .testimonial__header {
+        font-size: 2.25rem;
+        font-weight: 500;
+        margin-bottom: 1.5rem;
+      }
+
+      .testimonial__text {
+        font-size: 1.7rem;
+        margin-bottom: 3.5rem;
+        color: #666;
+      }
+
+      .testimonial__author {
+        margin-left: 3rem;
+        font-style: normal;
+
+        display: grid;
+        grid-template-columns: 6.5rem 1fr;
+        column-gap: 2rem;
+      }
+
+      .testimonial__photo {
+        grid-row: 1 / span 2;
+        width: 6.5rem;
+        border-radius: 50%;
+      }
+
+      .testimonial__name {
+        font-size: 1.7rem;
+        font-weight: 500;
+        align-self: end;
+        margin: 0;
+      }
+
+      .testimonial__location {
+        font-size: 1.5rem;
+      }
+
+      .section__title--testimonials {
+        margin-bottom: 4rem;
+      }
+    </style>
   </head>
   <body>
+    <div class="main-content">
+      <section class="contact">
+        <img
+          src="../../../assets/arboles-fondo.jpg"
+          alt="Background Image"
+          class="contact-bg"
+        />
+        <div class="contact-content">
+          <h1>Nossos</h1>
+          <h1>Depoimentos</h1>
+        </div>
+      </section>
+    </div>
+
     <!-- Include the menu -->
     <div id="menu-container"></div>
-    
-   
-    <section class="carousel-section">
-      <h1>Depoimentos</h1>
-      <div class="carousel-container">
-          <button class="carousel-button prev" onclick="moveSlide(-1)">&#10094;</button>
-          <div class="carousel-slide active">
-              <img src="../../../assets/Broccoli-85x85.png" alt="Image 1">
-              <div class="text-container">
-                  <p class="quote">"Electrostatic reduction and seed separation to facilitate sowing".</p>
-                  <p class="author">Bolthouse Farms</p>
-              </div>
+
+    <div class="cards-wrapper">
+      <section class="section" id="section--3">
+        <div class="section__title section__title--testimonials">
+          <h2 class="section__description">Ainda está em dúvida?</h2>
+          <h3 class="section__header">
+            Milhões de pessoas já estão melhorando suas vidas.
+          </h3>
+        </div>
+
+        <div class="slider">
+          <h5 class="testimonial__header">Depoimentos Australianos!</h5>
+
+          <div class="slide slide--1">
+            <div class="testimonial">
+              <h5 class="testimonial__header">A melhor decisão financeira de todas!</h5>
+              <blockquote class="testimonial__text">
+                "Durante a nossa última temporada de colheita, alcançamos um aumento de 21% no rendimento dos nossos brócolis usando os sistemas de água Omni"
+              </blockquote>
+              <address class="testimonial__author">
+                <img
+                  src="../../../assets/Broccoli-75x75.png"
+                  alt=""
+                  class="testimonial__photo"
+                />
+                <h6 class="testimonial__name">Scott Howington</h6>
+                <p class="testimonial__location">Farmer</p>
+              </address>
+            </div>
           </div>
-          <div class="carousel-slide">
-              <img src="../../../assets/Bolthouse-Farms-85x85.png" alt="Image 2">
-              <div class="text-container">
-                  <p class="quote">"Another testimonial text for the second image".</p>
-                  <p class="author">LoBue Farms</p>
-              </div>
+
+          <div class="slide slide--2">
+            <div class="testimonial">
+              <h5 class="testimonial__header">
+                The last step to becoming a complete minimalist
+              </h5>
+              <blockquote class="testimonial__text">
+                Quisquam itaque deserunt ullam, quia ea repellendus provident,
+                ducimus neque ipsam modi voluptatibus doloremque, corrupti
+                laborum. Incidunt numquam perferendis veritatis neque
+                repellendus. Lorem, ipsum dolor sit amet consectetur adipisicing
+                elit. Illo deserunt exercitationem deleniti.
+              </blockquote>
+              <address class="testimonial__author">
+                <img
+                  src="../../../assets/Broccoli-80x80.png"
+                  alt=""
+                  class="testimonial__photo"
+                />
+                <h6 class="testimonial__name">Miyah Miles</h6>
+                <p class="testimonial__location">London, UK</p>
+              </address>
+            </div>
           </div>
-          <div class="carousel-slide">
-              <img src="../../../assets/Lobue-85x85.png" alt="Image 3">
-              <div class="text-container">
-                  <p class="quote">"Yet another testimonial text for the third image".</p>
-                  <p class="author">Grimmway Farms</p>
-              </div>
+
+          <div class="slide slide--3">
+            <div class="testimonial">
+              <h5 class="testimonial__header">
+                Finally free from old-school banks
+              </h5>
+              <blockquote class="testimonial__text">
+                Debitis, nihil sit minus suscipit magni aperiam vel tenetur
+                incidunt commodi architecto numquam omnis nulla autem,
+                necessitatibus blanditiis modi similique quidem. Odio aliquam
+                culpa dicta beatae quod maiores ipsa minus consequatur error
+                sunt, deleniti saepe aliquid quos inventore sequi.
+                Necessitatibus id alias reiciendis, perferendis facere.
+              </blockquote>
+              <address class="testimonial__author">
+                <img
+                  src="../../../assets/Broccoli-80x80.png"
+                  alt=""
+                  class="testimonial__photo"
+                />
+                <h6 class="testimonial__name">Francisco Gomes</h6>
+                <p class="testimonial__location">Lisbon, Portugal</p>
+              </address>
+            </div>
           </div>
-          <!-- Add more slides as needed -->
-          <button class="carousel-button next" onclick="moveSlide(1)">&#10095;</button>
-      </div>
-      <div class="carousel-dots">
-          <span class="dot active" onclick="currentSlide(0)"></span>
-          <span class="dot" onclick="currentSlide(1)"></span>
-          <span class="dot" onclick="currentSlide(2)"></span>
-          <!-- Add more dots as needed -->
-      </div>
-  </section>
+
+          <!-- <div class="slide"><img src="img/img-1.jpg" alt="Photo 1" /></div>
+          <div class="slide"><img src="img/img-2.jpg" alt="Photo 2" /></div>
+          <div class="slide"><img src="img/img-3.jpg" alt="Photo 3" /></div>
+          <div class="slide"><img src="img/img-4.jpg" alt="Photo 4" /></div> -->
+          <button class="slider__btn slider__btn--left">&larr;</button>
+          <button class="slider__btn slider__btn--right">&rarr;</button>
+          <div class="dots"></div>
+        </div>
+      </section>
+    </div>
 
     <!-- Include the footer -->
     <div id="footer-container"></div>
 
     <script src="../../js/script.js"></script>
+    <script type="text/javascript">
+      const slider = function () {
+        const slides = document.querySelectorAll(".slide");
+        const btnLeft = document.querySelector(".slider__btn--left");
+        const btnRight = document.querySelector(".slider__btn--right");
+        const dotContainer = document.querySelector(".dots");
+
+        let curSlide = 0;
+        const maxSlide = slides.length;
+
+        // Functions
+        const createDots = function () {
+          slides.forEach(function (_, i) {
+            dotContainer.insertAdjacentHTML(
+              "beforeend",
+              `<button class="dots__dot" data-slide="${i}"></button>`
+            );
+          });
+        };
+
+        const activateDot = function (slide) {
+          document
+            .querySelectorAll(".dots__dot")
+            .forEach((dot) => dot.classList.remove("dots__dot--active"));
+
+          document
+            .querySelector(`.dots__dot[data-slide="${slide}"]`)
+            .classList.add("dots__dot--active");
+        };
+
+        const goToSlide = function (slide) {
+          slides.forEach(
+            (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
+          );
+        };
+
+        // Next slide
+        const nextSlide = function () {
+          if (curSlide === maxSlide - 1) {
+            curSlide = 0;
+          } else {
+            curSlide++;
+          }
+
+          goToSlide(curSlide);
+          activateDot(curSlide);
+        };
+
+        const prevSlide = function () {
+          if (curSlide === 0) {
+            curSlide = maxSlide - 1;
+          } else {
+            curSlide--;
+          }
+          goToSlide(curSlide);
+          activateDot(curSlide);
+        };
+
+        const init = function () {
+          goToSlide(0);
+          createDots();
+
+          activateDot(0);
+        };
+        init();
+
+        // Event handlers
+        btnRight.addEventListener("click", nextSlide);
+        btnLeft.addEventListener("click", prevSlide);
+
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "ArrowLeft") prevSlide();
+          e.key === "ArrowRight" && nextSlide();
+        });
+
+        dotContainer.addEventListener("click", function (e) {
+          if (e.target.classList.contains("dots__dot")) {
+            const { slide } = e.target.dataset;
+            goToSlide(slide);
+            activateDot(slide);
+          }
+        });
+      };
+      slider();
+    </script>
   </body>
 </html>
