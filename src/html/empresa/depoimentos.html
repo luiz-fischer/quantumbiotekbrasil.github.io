@@ -14,34 +14,44 @@
   <body>
     <!-- Include the menu -->
     <div id="menu-container"></div>
-
-    <div class="main-content">
-      <section class="contact">
-        <img
-          src="../../../assets/arboles-fondo.jpg"
-          alt="Background Image"
-          class="contact-bg"
-        />
-        <div class="contact-content">
-          <h1>Nossos</h1>
-          <h1>Depoimentos</h1>
-        </div>
-      </section>
-    </div>
-
-    <div class="content-section">
-      <div class="video-container">
-        <video src="../../../../assets/Omnienviro-English.mp4" controls></video>
+    
+   
+    <section class="carousel-section">
+      <h1>Depoimentos</h1>
+      <div class="carousel-container">
+          <button class="carousel-button prev" onclick="moveSlide(-1)">&#10094;</button>
+          <div class="carousel-slide active">
+              <img src="../../../assets/Broccoli-85x85.png" alt="Image 1">
+              <div class="text-container">
+                  <p class="quote">"Electrostatic reduction and seed separation to facilitate sowing".</p>
+                  <p class="author">Bolthouse Farms</p>
+              </div>
+          </div>
+          <div class="carousel-slide">
+              <img src="../../../assets/Bolthouse-Farms-85x85.png" alt="Image 2">
+              <div class="text-container">
+                  <p class="quote">"Another testimonial text for the second image".</p>
+                  <p class="author">LoBue Farms</p>
+              </div>
+          </div>
+          <div class="carousel-slide">
+              <img src="../../../assets/Lobue-85x85.png" alt="Image 3">
+              <div class="text-container">
+                  <p class="quote">"Yet another testimonial text for the third image".</p>
+                  <p class="author">Grimmway Farms</p>
+              </div>
+          </div>
+          <!-- Add more slides as needed -->
+          <button class="carousel-button next" onclick="moveSlide(1)">&#10095;</button>
       </div>
-      <div class="text-container">
-        <h2>Água estruturada traz benefícios onde quer que esteja instalada</h2>
-        <a href="#" class="custom-cta-button"
-          ><span>Descubra como funciona</span></a
-        >
+      <div class="carousel-dots">
+          <span class="dot active" onclick="currentSlide(0)"></span>
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <!-- Add more dots as needed -->
       </div>
-    </div>
+  </section>
 
-    <div class="cards-wrapper"></div>
     <!-- Include the footer -->
     <div id="footer-container"></div>
 
