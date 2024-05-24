@@ -9,7 +9,7 @@
       href="../../../assets/AvRecurso-2.png"
       type="image/x-icon"
     />
-    <title>Omniambiente - Quantum Biotek Brasil</title>
+    <title>Depoimentos - Quantum Biotek Brasil</title>
     <style>
       * {
         margin: 0;
@@ -25,159 +25,7 @@
       body {
         font-family: "Poppins", sans-serif;
         font-weight: 300;
-        color: #444;
         line-height: 1.9;
-        background-color: #f3f3f3;
-      }
-      /* SLIDER */
-      .slider {
-        max-width: 100rem;
-        height: 50rem;
-        margin: 0 auto;
-        position: relative;
-
-        /* IN THE END */
-        overflow: hidden;
-      }
-
-      .slide {
-        position: absolute;
-        top: 0;
-        width: 100%;
-        height: 50rem;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        /* THIS creates the animation! */
-        transition: transform 1s;
-      }
-
-      .slide > img {
-        /* Only for images that have different size than slide */
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
-      .slider__btn {
-        position: absolute;
-        top: 50%;
-        z-index: 10;
-
-        border: none;
-        background: rgba(255, 255, 255, 0.7);
-        font-family: inherit;
-        color: #333;
-        border-radius: 50%;
-        height: 5.5rem;
-        width: 5.5rem;
-        font-size: 3.25rem;
-        cursor: pointer;
-      }
-
-      .slider__btn--left {
-        left: 6%;
-        transform: translate(-50%, -50%);
-      }
-
-      .slider__btn--right {
-        right: 6%;
-        transform: translate(50%, -50%);
-      }
-
-      .dots {
-        position: absolute;
-        bottom: 5%;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-      }
-
-      .dots__dot {
-        border: none;
-        background-color: #b9b9b9;
-        opacity: 0.7;
-        height: 1rem;
-        width: 1rem;
-        border-radius: 50%;
-        margin-right: 1.75rem;
-        cursor: pointer;
-        transition: all 0.5s;
-
-        /* Only necessary when overlying images */
-        /* box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.7); */
-      }
-
-      .dots__dot:last-child {
-        margin: 0;
-      }
-
-      .dots__dot--active {
-        /* background-color: #fff; */
-        background-color: #888;
-        opacity: 1;
-      }
-
-      /* TESTIMONIALS */
-      .testimonial {
-        width: 65%;
-        position: relative;
-      }
-
-      .testimonial::before {
-        content: "\201C";
-        position: absolute;
-        top: -5.7rem;
-        left: -6.8rem;
-        line-height: 1;
-        font-size: 20rem;
-        font-family: inherit;
-        color: var(--color-primary);
-        z-index: -1;
-      }
-
-      .testimonial__header {
-        font-size: 2.25rem;
-        font-weight: 500;
-        margin-bottom: 1.5rem;
-      }
-
-      .testimonial__text {
-        font-size: 1.7rem;
-        margin-bottom: 3.5rem;
-        color: #666;
-      }
-
-      .testimonial__author {
-        margin-left: 3rem;
-        font-style: normal;
-
-        display: grid;
-        grid-template-columns: 6.5rem 1fr;
-        column-gap: 2rem;
-      }
-
-      .testimonial__photo {
-        grid-row: 1 / span 2;
-        width: 6.5rem;
-        border-radius: 50%;
-      }
-
-      .testimonial__name {
-        font-size: 1.7rem;
-        font-weight: 500;
-        align-self: end;
-        margin: 0;
-      }
-
-      .testimonial__location {
-        font-size: 1.5rem;
-      }
-
-      .section__title--testimonials {
-        margin-bottom: 4rem;
       }
     </style>
   </head>
@@ -200,26 +48,30 @@
     <div id="menu-container"></div>
 
     <div class="cards-wrapper">
-      <section class="section" id="section--3">
+      <section class="section" id="section--1">
         <div class="section__title section__title--testimonials">
-          <h2 class="section__description">Ainda está em dúvida?</h2>
-          <h3 class="section__header">
+          <h2 class="section__description" style="font-size: 5rem;">Ainda está em dúvida?</h2>
+          <h3 class="section__header" style="font-size: 2rem;">
             Milhões de pessoas já estão melhorando suas vidas.
           </h3>
         </div>
 
         <div class="slider">
-          <h5 class="testimonial__header">Depoimentos Australianos!</h5>
+          <h5 class="testimonial__header">Depoimentos da Austrália!</h5>
 
           <div class="slide slide--1">
             <div class="testimonial">
-              <h5 class="testimonial__header">A melhor decisão financeira de todas!</h5>
+              <h5 class="testimonial__header">
+                A melhor decisão financeira de todas!
+              </h5>
               <blockquote class="testimonial__text">
-                "Durante a nossa última temporada de colheita, alcançamos um aumento de 21% no rendimento dos nossos brócolis usando os sistemas de água Omni"
+                “Durante a nossa última temporada de colheita, alcançamos um
+                aumento de 21% no rendimento dos nossos brócolis usando os
+                sistemas de água Omni”
               </blockquote>
               <address class="testimonial__author">
                 <img
-                  src="../../../assets/Broccoli-75x75.png"
+                  src="../../../assets/Broccoli-85x85.png"
                   alt=""
                   class="testimonial__photo"
                 />
@@ -231,60 +83,458 @@
 
           <div class="slide slide--2">
             <div class="testimonial">
-              <h5 class="testimonial__header">
-                The last step to becoming a complete minimalist
-              </h5>
+              <h5 class="testimonial__header">Trazendo maiores facilidades</h5>
               <blockquote class="testimonial__text">
-                Quisquam itaque deserunt ullam, quia ea repellendus provident,
-                ducimus neque ipsam modi voluptatibus doloremque, corrupti
-                laborum. Incidunt numquam perferendis veritatis neque
-                repellendus. Lorem, ipsum dolor sit amet consectetur adipisicing
-                elit. Illo deserunt exercitationem deleniti.
+                “Redução eletrostática e separação de sementes para facilitar a
+                semeadura.”
               </blockquote>
               <address class="testimonial__author">
                 <img
-                  src="../../../assets/Broccoli-80x80.png"
+                  src="../../../assets/Bolthouse-Farms-85x85.png"
                   alt=""
                   class="testimonial__photo"
                 />
-                <h6 class="testimonial__name">Miyah Miles</h6>
-                <p class="testimonial__location">London, UK</p>
+                <h6 class="testimonial__name">Bolthouse Farms</h6>
               </address>
             </div>
           </div>
 
           <div class="slide slide--3">
             <div class="testimonial">
-              <h5 class="testimonial__header">
-                Finally free from old-school banks
-              </h5>
+              <h5 class="testimonial__header">Aumento na produção</h5>
               <blockquote class="testimonial__text">
-                Debitis, nihil sit minus suscipit magni aperiam vel tenetur
-                incidunt commodi architecto numquam omnis nulla autem,
-                necessitatibus blanditiis modi similique quidem. Odio aliquam
-                culpa dicta beatae quod maiores ipsa minus consequatur error
-                sunt, deleniti saepe aliquid quos inventore sequi.
-                Necessitatibus id alias reiciendis, perferendis facere.
+                “Aumento de 19 fardos em nosso teste controlado de 10 acres.
+                Maior novo crescimento e rendimento com uma irrigação.”
               </blockquote>
               <address class="testimonial__author">
                 <img
-                  src="../../../assets/Broccoli-80x80.png"
+                  src="../../../assets/Lobue-85x85.png"
                   alt=""
                   class="testimonial__photo"
                 />
-                <h6 class="testimonial__name">Francisco Gomes</h6>
-                <p class="testimonial__location">Lisbon, Portugal</p>
+                <h6 class="testimonial__name">Peter LoBue</h6>
+                <p class="testimonial__location">LoBue Farms</p>
               </address>
             </div>
           </div>
 
-          <!-- <div class="slide"><img src="img/img-1.jpg" alt="Photo 1" /></div>
-          <div class="slide"><img src="img/img-2.jpg" alt="Photo 2" /></div>
-          <div class="slide"><img src="img/img-3.jpg" alt="Photo 3" /></div>
-          <div class="slide"><img src="img/img-4.jpg" alt="Photo 4" /></div> -->
+          <div class="slide slide--4">
+            <div class="testimonial">
+              <h5 class="testimonial__header">Eficiência</h5>
+              <blockquote class="testimonial__text">
+                "Funciona tão bem quanto gesso em campos de sanguessugas."
+              </blockquote>
+              <address class="testimonial__author">
+                <img
+                  src="../../../assets/Grimmway-Farms-85x85.png"
+                  alt=""
+                  class="testimonial__photo"
+                />
+                <h6 class="testimonial__name">Grimmway Farms</h6>
+              </address>
+            </div>
+          </div>
+
+          <div class="slide slide--5">
+            <div class="testimonial">
+              <h5 class="testimonial__header">Economia e Meio Ambiente</h5>
+              <blockquote class="testimonial__text">
+                "O sistema de água OmniAmbiente resulta em melhor penetração de
+                água para minhas hortaliças; portanto, uso menos água."
+              </blockquote>
+              <address class="testimonial__author">
+                <img
+                  src="../../../assets/cafe-gratitude-85x85.png"
+                  alt=""
+                  class="testimonial__photo"
+                />
+                <h6 class="testimonial__name">Matthew Englehart</h6>
+                <p class="testimonial__location">
+                  Be Love Farm/Cafe Grantitude
+                </p>
+              </address>
+            </div>
+          </div>
+
+          <div class="slide slide--6">
+            <div class="testimonial">
+              <h5 class="testimonial__header">Melhores frutos</h5>
+              <blockquote class="testimonial__text">
+                "Usar o sistema OmniAmbiente ajudou com meu problema de água
+                dura(excesso de cálcio e magnésio), aumentou o rendimento da
+                minha colheita e melhorou a qualidade das plantas."
+              </blockquote>
+              <address class="testimonial__author">
+                <img
+                  src="../../../assets/Bounty-of-the-Valley-85x85.png"
+                  alt=""
+                  class="testimonial__photo"
+                />
+                <h6 class="testimonial__name">Matt Hayes</h6>
+                <p class="testimonial__location">Bounty of the Valley</p>
+              </address>
+            </div>
+          </div>
+
+          <div class="slide slide--7">
+            <div class="testimonial">
+              <h5 class="testimonial__header">
+                Melhora no sistema de resfriamento
+              </h5>
+              <blockquote class="testimonial__text">
+                "Melhoramos o rendimento e a qualidade do nosso
+                Radicchio(Endívia) utilizando o sistema de água OmniAmbiente.
+                Também alcançamos uma redução significativa de incrustações em
+                nossa torre de resfriamento."
+              </blockquote>
+              <address class="testimonial__author">
+                <img
+                  src="../../../assets/jmarchini-85x85.png"
+                  alt=""
+                  class="testimonial__photo"
+                />
+                <h6 class="testimonial__name">Jeff Marchini</h6>
+                <p class="testimonial__location">J.Marchini Farms</p>
+              </address>
+            </div>
+          </div>
+
+          <div class="slide slide--8">
+            <div class="testimonial">
+              <h5 class="testimonial__header">Uniformidade na germinação</h5>
+              <blockquote class="testimonial__text">
+                “Minha produção de espinafre baby foi 35% maior com a unidade
+                Omni. Isso me deu uniformidade na germinação das sementes para
+                que eu pudesse colher tudo ao mesmo tempo."
+              </blockquote>
+              <address class="testimonial__author">
+                <img
+                  src="../../../assets/rincon-farms-85x85.png"
+                  alt=""
+                  class="testimonial__photo"
+                />
+                <h6 class="testimonial__name">Wayne Gularte</h6>
+                <p class="testimonial__location">Rincon Farms</p>
+              </address>
+            </div>
+          </div>
+
+          <div class="slide slide--9">
+            <div class="testimonial">
+              <h5 class="testimonial__header">Melhores frutos</h5>
+              <blockquote class="testimonial__text">
+                "Usar o sistema OmniAmbiente ajudou com meu problema de água
+                dura(excesso de cálcio e magnésio), aumentou o rendimento da
+                minha colheita e melhorou a qualidade das plantas."
+              </blockquote>
+              <address class="testimonial__author">
+                <img
+                  src="../../../assets/SS-Stamoules_110pix-85x85.png"
+                  alt=""
+                  class="testimonial__photo"
+                />
+                <h6 class="testimonial__name">Matt Hayes</h6>
+                <p class="testimonial__location">Bounty of the Valley</p>
+              </address>
+            </div>
+          </div>
+
+          <div class="slide slide--10">
+            <div class="testimonial">
+              <h5 class="testimonial__header">Melhores rendimentos</h5>
+              <blockquote class="testimonial__text">
+                “Em meus trinta anos de agricultura, nunca vi milho assim.
+                Obtivemos um aumento de 27% nos rendimentos com o sistema
+                OmniAmbiente.”
+              </blockquote>
+              <address class="testimonial__author">
+                <img
+                  src="../../../assets/Tanimura-85x85.png"
+                  alt=""
+                  class="testimonial__photo"
+                />
+                <h6 class="testimonial__name">Chuck Dees</h6>
+                <p class="testimonial__location">Drip 2000 Irrigation</p>
+              </address>
+            </div>
+          </div>
+
+          <div class="slide slide--11">
+            <div class="testimonial">
+              <h5 class="testimonial__header">Redução no uso da água</h5>
+              <blockquote class="testimonial__text">
+                "Tivemos um aumento de 800 libras por acre em nosso programa de
+                espinafre usando o sistema de água OmniAmbiente, bem como uma
+                redução no uso de água."
+              </blockquote>
+              <address class="testimonial__author">
+                <img
+                  src="../../../assets/Tanimura-85x85.png"
+                  alt=""
+                  class="testimonial__photo"
+                />
+                <h6 class="testimonial__name">Mike Thorp</h6>
+                <p class="testimonial__location">Tanimura and Antle</p>
+              </address>
+            </div>
+          </div>
+
+          <div class="slide slide--12">
+            <div class="testimonial">
+              <h5 class="testimonial__header">Salvando plantações</h5>
+              <blockquote class="testimonial__text">
+                "Comecei hesitante, pensando que as unidades atrapalhariam a
+                água. Assim que liguei esse sistema, percebi que minha pressão
+                caiu e imediatamente tive um fluxo de água melhor. Com as
+                condições de seca aqui no Kansas, meus vizinhos disse que meu
+                milho já deveria estar queimado... porém, ainda estamos fortes.
+                Você tem que vir aqui no final da colheita para que possamos
+                compartilhar isso com nossa comunidade agrícola.
+              </blockquote>
+              <address class="testimonial__author">
+                <img
+                  src="../../../assets/Western-Kansas-Corn-Farmer-85x85.png"
+                  alt=""
+                  class="testimonial__photo"
+                />
+                <h6 class="testimonial__name">Larry Unruh</h6>
+                <p class="testimonial__location">Western Kansas Corn Farmer</p>
+              </address>
+            </div>
+          </div>
+
           <button class="slider__btn slider__btn--left">&larr;</button>
           <button class="slider__btn slider__btn--right">&rarr;</button>
           <div class="dots"></div>
+        </div>
+      </section>
+    </div>
+
+    <div class="cards-wrapper">
+      <h5 class="testimonial__header">Depoimentos da America Latina!</h5>
+
+      <section class="section" id="section--2">
+        <div class="slider2">
+          <div class="slide2 slide2--1">
+            <div class="testimonial2">
+              <h5 class="testimonial__header" style="margin-top: 100px">
+                Bons Comentários e Recomendações
+              </h5>
+              <blockquote class="testimonial2__text">
+                Só tenho coisas boas a dizer sobre estes aparelhos e
+                recomendo-os a todos os produtores; Desde que instalamos nosso
+                primeiro Estruturador Magnético OmniAmbiente em nosso
+                alimentador eletrônico de bezerros, há 4 anos, e depois de ver
+                como os problemas de diarréia e inchaço em nossos animais
+                melhoraram em apenas alguns dias, decidimos que todo o nosso
+                gado deveria ter água estruturada. Depois veio a instalação de
+                um Estruturador de 6” no equipamento de irrigação do paddock,
+                depois na casa da fazenda, na piscina e até na nossa casa urbana
+                temos equipamentos instalados, num total de seis ou sete
+                aparelhos adquiridos. Repito, só tenho bons comentários e
+                recomendação completa para você fazer este fabuloso
+                investimento, é o que posso dizer.
+              </blockquote>
+              <address class="testimonial__author">
+                <img
+                  src="../../../assets/hacienda-el-empedrado-85x85.jpg"
+                  alt=""
+                  class="testimonial__photo"
+                />
+                <h6 class="testimonial__name">Fernando Duran</h6>
+                <p class="testimonial__location">EL EMPEDRADO RANCH</p>
+              </address>
+            </div>
+          </div>
+
+          <div class="slide2 slide2--2">
+            <div class="testimonial">
+              <h5 class="testimonial__header">Estruturando água e vidas</h5>
+              <blockquote class="testimonial2__text">
+                O dispositivo estruturador de água marcou um antes e um depois
+                no nosso cultivo de mirtilo, pois só estruturando a água o
+                substrato onde os mirtilos são plantados assimila melhor a água,
+                e as plantas absorvem melhor todos os nutrientes que lhes são
+                fornecidos todos os dias, o resultado é visto na maior qualidade
+                dos frutos, na folhagem, no maior desenvolvimento dos ramos
+                produtivos, no estado geral da planta, no seu verdor, folhagem,
+                frescor; portanto recomendamos fortemente, é um ótimo produto,
+                recomendamos e continuaremos a utilizá-lo.
+              </blockquote>
+              <address class="testimonial__author">
+                <img
+                  src="../../../assets/sabana-blues-85x85.jpg"
+                  alt=""
+                  class="testimonial__photo"
+                />
+                <h6 class="testimonial__name">Juan Manuel Duque</h6>
+                <p class="testimonial__location">SABANA BLUES SAS</p>
+              </address>
+            </div>
+          </div>
+
+          <div class="slide2 slide2--3">
+            <div class="testimonial">
+              <h5 class="testimonial__header">Uma lista de benefícios</h5>
+              <blockquote class="testimonial2__text">
+                Há quatro anos utilizamos o dispositivo estruturador magnético
+                de água OmniAmbiente HDMR em todas as nossas fazendas, o que nos
+                trouxe uma série de benefícios importantes, entre os quais
+                podemos destacar:
+
+                <li>Melhor condição corporal dos animais</li>
+                <li>
+                  Melhor comportamento produtivo especialmente no alto verão
+                </li>
+                <li>
+                  Uso mínimo de produtos químicos antiparasitários devido à
+                  melhor qualidade da água
+                </li>
+                <li>
+                  Estabilidade em nosso gado reprodutor e altos níveis de
+                  prenhez em torno de 72%
+                </li>
+                <li>
+                  Otimização do ganho de peso final pela qualidade de nossas
+                  pastagens irrigadas com água estruturada (520 a 550 gramas por
+                  dia) no alto verão
+                </li>
+                <li>
+                  Melhoria na qualidade de vida não só dos nossos animais, mas
+                  também dos nossos colaboradores que vivem nas fazendas
+                  complementa perfeitamente nossa Rotação Voisin para um modelo
+                  GREEN CATTLE com uso mínimo de produtos químicos.
+                </li>
+                <li>
+                  Marcada preferência dos animais pela água de poço, em
+                  comparação à água de lagoas e jagüeys."
+                </li>
+              </blockquote>
+              <address class="testimonial__author">
+                <img
+                  src="../../../assets/puerto-cibeles-85x85.jpg"
+                  alt=""
+                  class="testimonial__photo"
+                />
+                <h6 class="testimonial__name">Dr. Juan José Guerra Hoyos</h6>
+                <p class="testimonial__location">
+                  PUERTO CIBELES CATTLE RAISING
+                </p>
+              </address>
+            </div>
+          </div>
+
+          <div class="slide2 slide2--4">
+            <div class="testimonial">
+              <h5 class="testimonial__header">Tecnologia magnífica</h5>
+              <blockquote class="testimonial2__text">
+                Desde que instalamos dispositivos estruturadores magnéticos
+                OmniAmbiente HDMR em nossas fazendas, testemunhamos grandes
+                melhorias no bem-estar de nossos animais, a ingestão de água (de
+                poços profundos…) aumentou cerca de 30%, o que se refletiu
+                diretamente na produtividade. Aumentou produção de leite,
+                maiores taxas de fertilidade, melhor saúde dos nossos animais,
+                entre outros. As vacas não percorrem mais longas distâncias em
+                busca de água em lagoas e jagüeys, mas agora preferem água de
+                poço, ao contrário do nosso sistema anterior, quando evitavam
+                beber. É uma tecnologia magnífica e totalmente necessária em
+                qualquer exploração agrícola
+              </blockquote>
+              <address class="testimonial__author">
+                <img
+                  src="../../../assets/la-tequendama-85x85.png"
+                  alt=""
+                  class="testimonial__photo"
+                />
+                <h6 class="testimonial__name">Juan Andrés Garcia Jiménez</h6>
+                <p class="testimonial__location">Tequendama ranch</p>
+              </address>
+            </div>
+          </div>
+
+          <div class="slide2 slide2--5">
+            <div class="testimonial">
+              <h5 class="testimonial__header">Salvando vidas</h5>
+              <blockquote class="testimonial2__text">
+                Junto com a Ecopetrol, a associação Cebu e alguns amigos, doamos
+                à uma pequena escola em Alta Guajira, para a qual a Ecopetrol
+                construiu um poço profundo, mas a água era muito salobra, então
+                foi aí que instalamos ali um dispositivo estruturador
+                OmniAmbiente; hoje essa água é potável; Até recentemente
+                mandamos alguém fazer alguns reparos lá na escolinha;
+                aproveitaram e conseguiram que todas as casas próximas
+                compartilhassem essa água para as cozinhas e banheiros,
+                melhorando muito a qualidade de vida das pessoas de quem os usa.
+              </blockquote>
+              <address class="testimonial__author">
+                <img
+                  src="../../../assets/Maria-del-Rocio-zapata-85x85.png"
+                  alt=""
+                  class="testimonial__photo"
+                />
+                <h6 class="testimonial__name">Ma. del Rocío Zapata</h6>
+                <p class="testimonial__location">Zorillos cattle raising</p>
+              </address>
+            </div>
+          </div>
+
+          <div class="slide2 slide2--6">
+            <div class="testimonial">
+              <h5 class="testimonial__header">Resolvendo a escassez de água</h5>
+              <blockquote class="testimonial2__text">
+                Minha opinião é que existe um antes e um depois em termos de
+                exploração quando esses dispositivos são instalados. Para mim
+                esses dispositivos são sagrados, pois embora se eu nascesse de
+                novo nunca mais compraria uma fazenda sem água, quando o fiz foi
+                minha única opção e a instalação dessa tecnologia resolveu meus
+                problemas de escassez de água, os dispositivos estruturadores
+                representam eficiência, melhoria da qualidade de vida dos
+                animais e das pessoas e o fato da água ter melhorado tanto mudou
+                a nossa vida na fazenda.
+              </blockquote>
+              <address class="testimonial__author">
+                <img
+                  src="../../../assets/ganaderia-zorrillos-85x85.png"
+                  alt=""
+                  class="testimonial__photo"
+                />
+                <h6 class="testimonial__name">Ma. del Rocío Zapata</h6>
+                <p class="testimonial__location">Zorillos Cattle Raising</p>
+              </address>
+            </div>
+          </div>
+
+          <div class="slide2 slide2--7">
+            <div class="testimonial">
+              <h5 class="testimonial__header">Água mais limpa</h5>
+              <blockquote class="testimonial2__text">
+                É o melhor investimento que fiz na minha fazenda; Sou
+                eternamente grato a quem me mostrou esta fantástica tecnologia,
+                porque passei de irrigar 4 hectares de capim mombasa, que
+                utilizava como erva cortada, para mais de 7 com a mesma
+                quantidade de água. Fiz um hectare de 22 cubas e meus vizinhos
+                ficam surpresos ao ver o crescimento e a tonalidade das
+                gramíneas. Nunca mais tirei uma vaca da fazenda no verão. Quase
+                não desparasito, porque os animais bebem água mais limpa nos
+                bebedouros, gasto menos com mantimentos e os equipamentos não
+                necessitam de manutenção; quando lavam o poço eu aproveito e
+                limpo e ele volta e parece que estava quando comprei há 8 anos.
+              </blockquote>
+              <address class="testimonial__author">
+                <img
+                  src="../../../assets/testimonio1-85x85.jpg"
+                  alt=""
+                  class="testimonial__photo"
+                />
+                <h6 class="testimonial__name">Edgar Paba</h6>
+                <p class="testimonial__location">Atlantic Cattle Raising</p>
+              </address>
+            </div>
+          </div>
+
+          <button class="slider2__btn slider2__btn--left">&larr;</button>
+          <button class="slider2__btn slider2__btn--right">&rarr;</button>
+          <div class="dots2"></div>
         </div>
       </section>
     </div>
@@ -294,89 +544,7 @@
 
     <script src="../../js/script.js"></script>
     <script type="text/javascript">
-      const slider = function () {
-        const slides = document.querySelectorAll(".slide");
-        const btnLeft = document.querySelector(".slider__btn--left");
-        const btnRight = document.querySelector(".slider__btn--right");
-        const dotContainer = document.querySelector(".dots");
-
-        let curSlide = 0;
-        const maxSlide = slides.length;
-
-        // Functions
-        const createDots = function () {
-          slides.forEach(function (_, i) {
-            dotContainer.insertAdjacentHTML(
-              "beforeend",
-              `<button class="dots__dot" data-slide="${i}"></button>`
-            );
-          });
-        };
-
-        const activateDot = function (slide) {
-          document
-            .querySelectorAll(".dots__dot")
-            .forEach((dot) => dot.classList.remove("dots__dot--active"));
-
-          document
-            .querySelector(`.dots__dot[data-slide="${slide}"]`)
-            .classList.add("dots__dot--active");
-        };
-
-        const goToSlide = function (slide) {
-          slides.forEach(
-            (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
-          );
-        };
-
-        // Next slide
-        const nextSlide = function () {
-          if (curSlide === maxSlide - 1) {
-            curSlide = 0;
-          } else {
-            curSlide++;
-          }
-
-          goToSlide(curSlide);
-          activateDot(curSlide);
-        };
-
-        const prevSlide = function () {
-          if (curSlide === 0) {
-            curSlide = maxSlide - 1;
-          } else {
-            curSlide--;
-          }
-          goToSlide(curSlide);
-          activateDot(curSlide);
-        };
-
-        const init = function () {
-          goToSlide(0);
-          createDots();
-
-          activateDot(0);
-        };
-        init();
-
-        // Event handlers
-        btnRight.addEventListener("click", nextSlide);
-        btnLeft.addEventListener("click", prevSlide);
-
-        document.addEventListener("keydown", function (e) {
-          if (e.key === "ArrowLeft") prevSlide();
-          e.key === "ArrowRight" && nextSlide();
-        });
-
-        dotContainer.addEventListener("click", function (e) {
-          if (e.target.classList.contains("dots__dot")) {
-            const { slide } = e.target.dataset;
-            goToSlide(slide);
-            activateDot(slide);
-          }
-        });
-      };
-      slider();
+      
     </script>
   </body>
 </html>
