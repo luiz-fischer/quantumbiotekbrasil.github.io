@@ -23,6 +23,7 @@ html {
 
 /* Estilos para o conteúdo do menu */
 .navbar-content {
+  font-size: 1vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
