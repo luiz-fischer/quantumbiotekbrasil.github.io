@@ -1,7 +1,8 @@
 function getBasePath() {
   const path = location.pathname;
+  console.log('PATH', path)
   const pathSegments = path.split("/");
-
+  console.log(pathSegments)
   // Remove o nome do arquivo e a pasta específica (se houver)
   pathSegments.pop();
 
@@ -34,9 +35,9 @@ function getBasePath() {
 function loadHeaderFooter() {
   const basePath = getBasePath();
 
-  const headerPath = new URL("html/header.html", location.origin + basePath)
+  const headerPath = new URL("header.html", location.origin + basePath)
     .href;
-  const footerPath = new URL("html/footer.html", location.origin + basePath)
+  const footerPath = new URL("footer.html", location.origin + basePath)
     .href;
 
   fetch(headerPath)
@@ -46,7 +47,7 @@ function loadHeaderFooter() {
 
       // Ajustar caminhos de imagem
       document.getElementById("logo").src = new URL(
-        "../../assets/Quantum-Biotek-Logo-Blanco-con-contorno.png",
+        "../assets/Quantum-Biotek-Logo-Blanco-con-contorno.png",
         location.origin + basePath
       ).href;
 
@@ -88,15 +89,15 @@ function loadHeaderFooter() {
       // Ajustar caminhos de imagem no footer
       const footerBasePath = new URL(basePath, location.origin).href;
       document.querySelector(".footer-logo").src = new URL(
-        "../../assets/Logo-Omnienviro-quantum-biotek-.jpg",
+        "../assets/Logo-Omnienviro-quantum-biotek-.jpg",
         footerBasePath
       ).href;
       document.querySelector(".footer-social img[src*='facebook']").src =
-        new URL("../../icons/facebook.png", footerBasePath).href;
+        new URL("../icons/facebook.png", footerBasePath).href;
       document.querySelector(".footer-social img[src*='twitter']").src =
-        new URL("../../icons/twitter.png", footerBasePath).href;
+        new URL("../icons/twitter.png", footerBasePath).href;
       document.querySelector(".footer-social img[src*='instagram']").src =
-        new URL("../../icons/instagram.png", footerBasePath).href;
+        new URL("../icons/instagram.png", footerBasePath).href;
     })
     .catch((error) => console.error("Error loading the footer:", error));
 }
