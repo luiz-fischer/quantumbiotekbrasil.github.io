@@ -5,7 +5,7 @@ on:
     branches:
       - master
 
-      
+
 jobs:
   deploy-to-s3:
     runs-on: ubuntu-latest
@@ -23,7 +23,7 @@ jobs:
       - name: Sync files to S3
         uses: jakejarvis/s3-sync-action@master
         with:
-          args: --follow-symlinks --delete --exclude 'README.md' --exclude ".github/" --exclude ".git/" --exclude ".gitignore"
+          args: --follow-symlinks --delete --exclude 'README.md' --exclude ".gitignore" --exclude '.github/**/*' --exclude '.git/**/*'
         env:
           AWS_S3_BUCKET: quantumbiotekbrasil
           SOURCE_DIR: "./"
