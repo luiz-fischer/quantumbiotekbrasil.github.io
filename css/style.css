@@ -356,9 +356,9 @@ img {
 .product-page {
   display: flex;
   padding: 1vw;
-  align-items: center; 
-  justify-content: flex-start; 
-  width: 100%; 
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
 }
 
 .product {
@@ -372,21 +372,21 @@ img {
 }
 
 .product img {
-  width: 80%; 
-  max-width: 200px; 
-  height: auto; 
+  width: 80%;
+  max-width: 200px;
+  height: auto;
 }
 
 .product h1,
 .product p {
   text-align: center;
   color: black;
-  font-size: 1rem; 
+  font-size: 1rem;
 }
 
 .data-sheet-button {
-  align-self: start; 
-  margin-top: 20px; 
+  align-self: start;
+  margin-top: 20px;
 }
 
 .share-links {
@@ -421,6 +421,65 @@ img {
   outline: none;
   text-align: center;
   text-decoration: none;
+}
+
+/* EMPRESAS */
+
+.benefits-section {
+  max-width: 30%;
+  margin-left: 20vw;
+}
+
+.benefits-container {
+  max-width: 1200px; 
+  margin: 0 auto; 
+}
+
+.benefits-container h1 {
+  font-size: 32px; 
+  margin-top: -1.5vw;
+  margin-bottom: 20px; 
+  color: #4caf50
+}
+
+.benefits-container p {
+  font-size: 18px; 
+  color: #333; 
+}
+
+
+
+
+
+.customer-section {
+  background-color: #f7f7f7;
+  padding: 40px 0;
+}
+
+.customer-container {
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  justify-items: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo-grid img {
+  max-width: 150px;
+  max-height: 85px;
+  transition: opacity 0.2s ease-in-out;
+  opacity: 0.3;
+}
+
+.logo-grid img:hover {
+  opacity: 1;
 }
 
 /* Estilos para dispositivos móveis */
@@ -1644,7 +1703,6 @@ form button:hover {
   .contact-certification-content p {
     font-size: 1.2em;
   }
-
 }
 
 @media (max-width: 480px) {
@@ -1687,8 +1745,8 @@ form button:hover {
   }
 
   .contact-logo {
-    order: -1; 
-    margin-bottom: 20px; 
+    order: -1;
+    margin-bottom: 20px;
   }
 
   .contact-logo img {
@@ -1711,5 +1769,4 @@ form button:hover {
   .contact-certification-content p {
     font-size: 1em;
   }
-
 }
