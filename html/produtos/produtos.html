@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="../../../assets/AvRecurso-2.png"
+      type="image/x-icon"
+    />
+    <title>Nossos Produtos - Quantum Biotek Brasil</title>
+  </head>
+  <body>
+    <div class="main-content">
+      <section class="contact">
+        <img
+          src="../../../assets/arboles-fondo.jpg"
+          alt="Background Image"
+          class="contact-bg"
+        />
+        <div class="contact-content">
+          <h1>Nossos</h1>
+          <h1>Produtos</h1>
+        </div>
+      </section>
+    </div>
+
+    <!-- Include the menu -->
+    <div id="menu-container"></div>
+
+      <div class="portifolio"></div>
+
+    <!-- Include the footer -->
+    <div id="footer-container"></div>
+
+    <script src="../../js/script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const lastClickedId = sessionStorage.getItem("lastClickedId");
+
+        const filePath = `./portifolio/${lastClickedId}.html`;
+
+        fetch(filePath)
+          .then((response) => response.text())
+          .then((html) => {
+            document.querySelector(".portifolio").innerHTML = html;
+          })
+          .catch((error) =>
+            console.error("Failed to load the HTML file:", error)
+          );
+      });
+    </script>
+  </body>
+</html>

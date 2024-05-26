@@ -33,91 +33,95 @@
       <section class="devices-section">
         <div class="devices-container">
           <div class="card">
-            <a href="#" class="card-link">
+            <a href="./produtos.html" id="quantumbiotek" class="card-link">
               <img
                 src="../../../assets/quantumbiotek-300x300.jpg"
-                alt="Product 1"
+                alt="quantumbiotek"
               />
               <p>Funil doméstico de uso pessoal</p>
             </a>
           </div>
           <div class="card">
-            <a href="#" class="card-link">
+            <a href="./produtos.html" id="quantumbiotek2" class="card-link">
               <img
                 src="../../../assets/quantumbiotek2-300x300.jpg"
-                alt="Product 2"
+                alt="quantumbiotek2"
               />
               <p>Funil portátil</p>
             </a>
           </div>
           <div class="card">
-            <a href="#" class="card-link">
+            <a
+              href="./produtos.html"
+              id="quantumbiotek10-1"
+              class="card-link"
+            >
               <img
                 src="../../../assets/quantumbiotek10-1-300x300.jpg"
-                alt="Product 3"
+                alt="quantumbiotek10-1"
               />
               <p>Dispositivo Estruturador de Combustível</p>
             </a>
           </div>
           <div class="card">
-            <a href="#" class="card-link">
+            <a href="./produtos.html" id="quantumbiotek9-1" class="card-link">
               <img
                 src="../../../assets/quantumbiotek9-1-300x300.jpg"
-                alt="Product 4"
+                alt="quantumbiotek9-1"
               />
               <p>OmniAmbiente H.D.M.R. Ref: SS316 x 3/4″</p>
             </a>
           </div>
           <div class="card">
-            <a href="#" class="card-link">
+            <a href="./produtos.html" id="quantumbiotek8" class="card-link">
               <img
                 src="../../../assets/quantumbiotek8-300x300.jpg"
-                alt="Product 5"
+                alt="quantumbiotek8"
               />
               <p>OmniAmbiente H.D.M.R. Ref:SS316Lx1″</p>
             </a>
           </div>
           <div class="card">
-            <a href="#" class="card-link">
+            <a href="./produtos.html" id="quantumbiotek4" class="card-link">
               <img
                 src="../../../assets/quantumbiotek4-300x300.jpg"
-                alt="Product 6"
+                alt="quantumbiotek4"
               />
               <p>OmniAmbiente H.D.M.R. Ref:SS316Lx12″</p>
             </a>
           </div>
           <div class="card">
-            <a href="#" class="card-link">
+            <a href="./produtos.html" id="quantumbiotek7" class="card-link">
               <img
                 src="../../../assets/quantumbiotek7-300x300.jpg"
-                alt="Product 7"
+                alt="quantumbiotek7"
               />
               <p>OmniAmbiente H.D.M.R. Ref:SS316Lx2″</p>
             </a>
           </div>
           <div class="card">
-            <a href="#" class="card-link">
+            <a href="./produtos.html" id="quantumbiotek6" class="card-link">
               <img
                 src="../../../assets/quantumbiotek6-300x300.jpg"
-                alt="Product 8"
+                alt="quantumbiotek6"
               />
               <p>OmniAmbiente H.D.M.R. Ref:SS316Lx3″</p>
             </a>
           </div>
           <div class="card">
-            <a href="#" class="card-link">
+            <a href="./produtos.html" id="quantumbiotek5" class="card-link">
               <img
                 src="../../../assets/quantumbiotek5-300x300.jpg"
-                alt="Product 7"
+                alt="quantumbiotek5"
               />
               <p>OmniAmbiente H.D.M.R. Ref:SS316Lx4″</p>
             </a>
           </div>
           <div class="card">
-            <a href="#" class="card-link">
+            <a href="./produtos.html" id="quantumbiotek6-2" class="card-link">
               <img
                 src="../../../assets/quantumbiotek6-300x300.jpg"
-                alt="Product 8"
+                alt="quantumbiotek6-2"
               />
               <p>OmniAmbiente H.D.M.R. Ref:SS316Lx8″</p>
             </a>
@@ -141,5 +145,15 @@
     </div>
 
     <script src="../../js/script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const links = document.querySelectorAll("a.card-link");
+        links.forEach((link) => {
+          link.addEventListener("click", function () {
+            sessionStorage.setItem("lastClickedId", this.id);
+          });
+        });
+      });
+    </script>
   </body>
 </html>
