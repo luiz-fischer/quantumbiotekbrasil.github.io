@@ -423,33 +423,31 @@ img {
   text-decoration: none;
 }
 
-/* EMPRESAS */
+/* SETORES */
 
 .benefits-section {
-  max-width: 30%;
-  margin-left: 20vw;
+  max-width: 70%;
+  background-color: #fff;
+  /* margin-left: 20vw; */
 }
 
 .benefits-container {
-  max-width: 1200px; 
-  margin: 0 auto; 
+  max-width: 1200px;
+  background-color: #fff;
+  margin: 0 auto;
 }
 
 .benefits-container h1 {
-  font-size: 32px; 
+  font-size: 32px;
   margin-top: -1.5vw;
-  margin-bottom: 20px; 
-  color: #4caf50
+  margin-bottom: 20px;
+  color: #4caf50;
 }
 
 .benefits-container p {
-  font-size: 18px; 
-  color: #333; 
+  font-size: 18px;
+  color: #333;
 }
-
-
-
-
 
 .customer-section {
   background-color: #f7f7f7;
@@ -480,6 +478,117 @@ img {
 
 .logo-grid img:hover {
   opacity: 1;
+}
+
+.benefits-section-list {
+  display: flex; /* Ativa o Flexbox */
+  align-items: center; /* Centraliza verticalmente os itens */
+  justify-content: space-between; /* Distribui espaço uniformemente entre os itens */
+  padding: 20px; /* Adiciona um pouco de espaço ao redor para não tocar nas bordas */
+  background-color: #fff;
+}
+
+.benefits-list,
+.benefits-description {
+  flex: 1;
+  margin: 2vw 15px;
+}
+
+.benefits-list h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.benefits-list ul {
+  list-style-type: none;
+  padding-bottom: 5px;
+  padding-bottom: 40px;
+}
+
+.benefits-list li {
+  color: #737e86;
+  margin-bottom: 0.5vw;
+  font-size: 1rem;
+}
+
+.benefits-description p {
+  color: #737e86;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* .benefits-list li:before {
+  content: '✔'; 
+  position: absolute;
+  left: 0; 
+} */
+
+.benefits-description {
+  width: 70%;
+}
+
+.benefits-description p {
+  font-size: 16px;
+}
+
+.image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.content-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+
+.scale-with-grid {
+  max-width: 40%;
+  height: auto;
+  margin-bottom: 3vw;
+}
+
+.scale-with-grid-list {
+  padding: 20px;
+  height: 60%;
+  width: 60%;
+}
+
+#sectors-list {
+  color: #737e86;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.content-block:hover .scale-with-grid-list {
+  transition: transform 0.5s ease-in-out;
+  transform: scale(1.14);
+}
+
+.content-block h3 {
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.content-block h3::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #4caf50;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transition: all 0.3s ease;
+}
+
+.content-block:hover h3::after {
+  width: 100%;
+  left: 0;
 }
 
 /* Estilos para dispositivos móveis */
@@ -989,7 +1098,7 @@ footer {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
   padding: 20px;
-  width: calc(33.33% - 20px); /* Ajusta a largura para 3 cards por linha */
+  width: calc(33.33% - 20px);
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -997,9 +1106,9 @@ footer {
 }
 
 .card img {
-  width: auto; /* Ajusta a largura da imagem */
-  height: 150px; /* Aumenta a altura da imagem */
-  margin-bottom: 10px; /* Espaço entre a imagem e o texto */
+  width: auto;
+  height: 150px;
+  margin-bottom: 10px;
 }
 
 .card-link {
