@@ -338,12 +338,6 @@ html {
 
 /* PORTIFOLIO */
 
-/* 
-img {
-  max-width: 100%;
-  height: auto;
-} */
-
 #related-products {
   padding: 0;
   display: flex;
@@ -423,12 +417,11 @@ img {
   text-decoration: none;
 }
 
-/* SETORES */
+/* SETORES AGRICULA */
 
 .benefits-section {
   max-width: 70%;
   background-color: #fff;
-  /* margin-left: 20vw; */
 }
 
 .benefits-container {
@@ -437,7 +430,7 @@ img {
   margin: 0 auto;
 }
 
-.benefits-container h1 {
+/* .benefits-container h1 {
   font-size: 32px;
   margin-top: -1.5vw;
   margin-bottom: 20px;
@@ -447,7 +440,7 @@ img {
 .benefits-container p {
   font-size: 18px;
   color: #333;
-}
+} */
 
 .customer-section {
   background-color: #f7f7f7;
@@ -481,10 +474,10 @@ img {
 }
 
 .benefits-section-list {
-  display: flex; /* Ativa o Flexbox */
-  align-items: center; /* Centraliza verticalmente os itens */
-  justify-content: space-between; /* Distribui espaço uniformemente entre os itens */
-  padding: 20px; /* Adiciona um pouco de espaço ao redor para não tocar nas bordas */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
   background-color: #fff;
 }
 
@@ -516,12 +509,6 @@ img {
   font-size: 16px;
   line-height: 1.5;
 }
-
-/* .benefits-list li:before {
-  content: '✔'; 
-  position: absolute;
-  left: 0; 
-} */
 
 .benefits-description {
   width: 70%;
@@ -590,6 +577,72 @@ img {
   width: 100%;
   left: 0;
 }
+
+.img-bottom {
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  margin-left: calc(-50vw + 50%);
+}
+
+.img-bottom img {
+  width: 100%;
+  height: 30vw; 
+  object-fit: cover; 
+  display: block;
+}
+
+.img-bottom h1 {
+  font-size: 3rem;
+  position: absolute; 
+  top: 40%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  color: white; 
+  text-align: left; 
+  width: 70%; 
+  padding-top: 2vw;
+  font-weight: 300;
+}
+
+.img-bottom h2 {
+  font-size: 3rem;
+  position: absolute; 
+  top: 30%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  color: white; 
+  text-align: left; 
+  width: 70%; 
+  padding-bottom: 4vw;
+  font-weight: 200;
+}
+
+#text-title span {
+  position: relative;
+  cursor: pointer; 
+}
+
+#text-title span::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 4px;
+  background-color: #4caf50;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transition: all 0.3s ease;
+  transform: translateX(-50%); 
+}
+
+#text-title span:hover::after {
+  width: 100%;
+  left: 0;
+  transform: translateX(0%); 
+}
+
+/* FIM SETORES AGRICULA */
 
 /* Estilos para dispositivos móveis */
 @media screen and (max-width: 1160px) {
@@ -1425,7 +1478,7 @@ footer {
 .testimonials-section {
   text-align: center;
   padding: 50px 20px;
-  background-color: #f9f9f9;
+  background-color: #f7f7f7;
 }
 
 .testimonials-section h1 {
@@ -1455,8 +1508,8 @@ footer {
 
 .testimonial-button .icon {
   margin-right: 10px;
-  height: 1.5vw; /* Ajuste conforme necessário */
-  width: 2vw; /* Ajuste conforme necessário */
+  height: 1.5vw;
+  width: 2vw;
 }
 
 .testimonial-button:hover {
