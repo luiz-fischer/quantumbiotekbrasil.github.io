@@ -722,6 +722,45 @@ html {
 
 /* FIM INDUSTRIA*/
 
+/* SAUDE */
+
+#text-title #span_saude::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 4px;
+  background-color: #f368b0;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transition: all 0.3s ease;
+  transform: translateX(-50%); 
+}
+
+#text-title #span_saude:hover::after {
+  width: 100%;
+  left: 0;
+  transform: translateX(0%); 
+}
+
+#content-block-saude h3::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #f368b0;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transition: all 0.3s ease;
+}
+
+#content-block-saude:hover h3::after {
+  width: 100%;
+  left: 0;
+}
+
+/* FIM SAUDE*/
 
 
 /* Estilos para dispositivos móveis */
