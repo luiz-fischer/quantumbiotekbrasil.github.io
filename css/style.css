@@ -636,6 +636,26 @@ html {
   transform: translateX(-50%); 
 }
 
+#text-title #span_pecuaria::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 4px;
+  background-color: #fff;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transition: all 0.3s ease;
+  transform: translateX(-50%); 
+}
+
+#text-title #span_pecuaria:hover::after {
+  width: 100%;
+  left: 0;
+  transform: translateX(0%); 
+}
+
+
 #text-title span:hover::after {
   width: 100%;
   left: 0;
