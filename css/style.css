@@ -636,6 +636,15 @@ html {
   transform: translateX(-50%); 
 }
 
+#text-title span:hover::after {
+  width: 100%;
+  left: 0;
+  transform: translateX(0%); 
+}
+
+/* FIM SETORES AGRICULA */
+
+/* PECUARIA */
 #text-title #span_pecuaria::after {
   content: "";
   display: block;
@@ -655,14 +664,65 @@ html {
   transform: translateX(0%); 
 }
 
+#content-block-pecuaria h3::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #f6c763;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transition: all 0.3s ease;
+}
 
-#text-title span:hover::after {
+#content-block-pecuaria:hover h3::after {
+  width: 100%;
+  left: 0;
+}
+
+/* FIM PECUARIA*/
+
+/* INDUSTRIA */
+#text-title #span_industria::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 4px;
+  background-color: #f5895f;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transition: all 0.3s ease;
+  transform: translateX(-50%); 
+}
+
+#text-title #span_industria:hover::after {
   width: 100%;
   left: 0;
   transform: translateX(0%); 
 }
 
-/* FIM SETORES AGRICULA */
+#content-block-industria h3::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #f5895f;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transition: all 0.3s ease;
+}
+
+#content-block-industria:hover h3::after {
+  width: 100%;
+  left: 0;
+}
+
+/* FIM INDUSTRIA*/
+
+
 
 /* Estilos para dispositivos móveis */
 @media screen and (max-width: 1160px) {
