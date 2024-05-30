@@ -848,6 +848,105 @@ html {
 }
 /* FIM LAR*/
 
+/* PISCINAS */
+
+#text-title #span_piscinas::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 4px;
+  background-color: #8adad1;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transition: all 0.3s ease;
+  transform: translateX(-50%); 
+}
+
+#text-title #span_piscinas:hover::after {
+  width: 100%;
+  left: 0;
+  transform: translateX(0%); 
+}
+
+#content-block-piscinas h3::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #8adad1;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transition: all 0.3s ease;
+}
+
+#content-block-piscinas:hover h3::after {
+  width: 100%;
+  left: 0;
+}
+
+#contact-certification-piscinas {
+  padding-top: 100px;
+  position: relative;
+  width: 100%;
+  height: 55vh;
+  background: url("../../assets/Fondo-Piscinas-2.png")
+    no-repeat center center/cover;
+  background-attachment: fixed;
+}
+
+/* FIM PISCINAS */
+
+/* COMBUSTIVEIS */
+
+#text-title #span_combustiveis::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 4px;
+  background-color: #762848;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transition: all 0.3s ease;
+  transform: translateX(-50%); 
+}
+
+#text-title #span_combustiveis:hover::after {
+  width: 100%;
+  left: 0;
+  transform: translateX(0%); 
+}
+
+#content-block-combustiveis h3::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #762848;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transition: all 0.3s ease;
+}
+
+#content-block-combustiveis:hover h3::after {
+  width: 100%;
+  left: 0;
+}
+
+#contact-certification-combustiveis {
+  padding-top: 100px;
+  position: relative;
+  width: 100%;
+  height: 55vh;
+  background: url("../../assets/Fondo-Hidrocarburos.png")
+    no-repeat center center/cover;
+  background-attachment: fixed;
+}
+
+/* FIM COMBUSTIVEIS */
 
 /* Estilos para dispositivos móveis */
 @media screen and (max-width: 1160px) {
