@@ -47,7 +47,7 @@ function loadHeaderFooter() {
 
       // Ajustar caminhos de imagem
       document.getElementById("logo").src = new URL(
-        "../assets/Quantum-Biotek-Logo-Blanco-con-contorno.png",
+        "../assets/Logo Quantum Biotek-03.png",
         location.origin + basePath
       ).href;
 
