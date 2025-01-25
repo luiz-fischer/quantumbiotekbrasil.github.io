@@ -1,0 +1,27 @@
+# Arquivo robots.txt - Gerenciamento do rastreamento de robôs
+
+# Permitir o acesso ao sitemap para melhor indexação
+Sitemap: http://http://quantumbiotekbrazil.com.br/sitemap.xml
+
+# Limitar o acesso a parâmetros dinâmicos
+Disallow: /*?sessionid=
+Disallow: /*?debug=
+
+# Permitir o rastreamento de APIs públicas
+User-agent: *
+Allow: /api/public/
+
+# Configuração específica para o Googlebot
+User-agent: Googlebot
+Disallow: /testes/
+Allow: /produtos/
+
+# Configuração específica para o Bingbot
+User-agent: Bingbot
+Disallow: /testes/
+
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /tmp/
+Allow: /
