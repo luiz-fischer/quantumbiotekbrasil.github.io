@@ -1,7 +1,7 @@
 # Arquivo robots.txt - Gerenciamento do rastreamento de robôs
 
 # Permitir o acesso ao sitemap para melhor indexação
-Sitemap: http://http://quantumbiotekbrazil.com.br/sitemap.xml
+Sitemap: https://quantumbiotekbrazil.com.br/sitemap.xml
 
 # Limitar o acesso a parâmetros dinâmicos
 Disallow: /*?sessionid=
