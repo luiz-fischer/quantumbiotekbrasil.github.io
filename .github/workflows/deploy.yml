@@ -25,6 +25,6 @@ jobs:
         with:
           args: --follow-symlinks --delete --exclude 'README.md' --exclude ".gitignore" --exclude '.github/**/*' --exclude '.git/**/*'
         env:
-          AWS_S3_BUCKET: quantumbiotekbrazil.com.br
+          AWS_S3_BUCKET: www.quantumbiotekbrazil.com.br
           SOURCE_DIR: "./"
           AWS_REGION: "us-east-1"
