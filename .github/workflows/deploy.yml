@@ -23,7 +23,8 @@ jobs:
       - name: Sync files to S3 https
         uses: jakejarvis/s3-sync-action@master
         with:
-          args: --follow-symlinks --delete --exclude 'README.md' --exclude ".gitignore" --exclude '.github/**/*' --exclude '.git/**/*'
+          args: --follow-symlinks --delete --exclude 'README.md' --exclude ".git*" --exclude '.github*'
+
         env:
           AWS_S3_BUCKET: www.quantumbiotekbrazil.com.br
           SOURCE_DIR: "./"
@@ -32,7 +33,8 @@ jobs:
       - name: Sync files to S3 http
         uses: jakejarvis/s3-sync-action@master
         with:
-          args: --follow-symlinks --delete --exclude 'README.md' --exclude ".gitignore" --exclude '.github/**/*' --exclude '.git/**/*'
+          args: --follow-symlinks --delete --exclude 'README.md' --exclude ".git*" --exclude '.github*'
+
         env:
           AWS_S3_BUCKET: quantumbiotekbrazil.com.br
           SOURCE_DIR: "./"
