@@ -1,27 +1,51 @@
 function getBasePath() {
   const path = location.pathname;
-  console.log('PATH', path)
+  console.log('PATH', path);
+  
+  // Conta quantos níveis de profundidade estamos (número de barras após o domínio)
   const pathSegments = path.split("/").filter(seg => seg !== "");
-  console.log(pathSegments)
+  console.log('Path segments:', pathSegments);
   
   // Remove o nome do arquivo se houver
   if (pathSegments.length > 0 && pathSegments[pathSegments.length - 1].includes('.')) {
     pathSegments.pop();
   }
-
-  // Remove a pasta específica se for uma subpasta
+  
+  console.log('Segments after removing file:', pathSegments);
+  
+  // Determina o nível de profundidade
+  // Se estamos em /quantumbiotekbrasil/html/setores/ -> pathSegments = [quantumbiotekbrasil, html, setores]
+  // Se estamos em /quantumbiotekbrasil/ -> pathSegments = [quantumbiotekbrasil]
+  
+  // Conta quantas pastas precisamos subir
+  let depth = 0;
+  
+  // Se temos "setores", "empresa", "omniambiente", "produtos", "contato" no caminho, estamos em html/[pasta]/
   const lastSegment = pathSegments[pathSegments.length - 1];
   if (["contato", "empresa", "omniambiente", "produtos", "setores"].includes(lastSegment)) {
-    pathSegments.pop();
+    depth = 2; // html/pasta/ -> precisa subir 2 níveis
+  } else if (pathSegments.length > 0 && pathSegments[pathSegments.length - 1] === "html") {
+    depth = 1; // html/ -> precisa subir 1 nível
+  } else if (pathSegments.length > 0 && pathSegments.some(seg => seg === "portifolio")) {
+    depth = 3; // html/produtos/portifolio/ -> precisa subir 3 níveis
+  } else {
+    depth = 0; // raiz
   }
-
-  // Junta os segmentos de volta para obter o caminho base
-  // Adiciona / no início e no final
-  const basePath = pathSegments.length > 0 ? "/" + pathSegments.join("/") + "/" : "/";
-
+  
+  console.log('Depth:', depth);
+  
+  // Constrói o caminho relativo
+  let basePath = "";
+  if (depth === 0) {
+    basePath = "./";
+  } else {
+    basePath = "../".repeat(depth);
+  }
+  
   console.log('BASE PATH:', basePath);
   return basePath;
 }
+
 
 function loadHeaderFooter() {
   const basePath = getBasePath();
@@ -42,16 +66,21 @@ function loadHeaderFooter() {
     .then((data) => {
       document.getElementById("menu-container").innerHTML = data;
 
-      // Ajustar caminhos de imagem
-      document.getElementById("logo").src = basePath + "assets/Logo Quantum Biotek-03.png";
+      // Ajustar caminhos de imagem do logo
+      const logoPath = basePath + "assets/Logo Quantum Biotek-03.png";
+      console.log('Logo path:', logoPath);
+      document.getElementById("logo").src = logoPath;
 
       // Ajustar caminhos dos links do menu-item
       const menuItems = document.querySelectorAll(".menu-item a");
       menuItems.forEach((item) => {
         const href = item.getAttribute("href");
         if (href && href.startsWith("./")) {
-          // Remove o ./ e adiciona o basePath
-          item.setAttribute("href", basePath + href.substring(2));
+          // O header.html tem links como ./index.html, ./html/setores/agricultura.html
+          // Precisamos ajustar baseado no basePath
+          const newHref = basePath + href.substring(2);
+          console.log('Adjusting link:', href, '->', newHref);
+          item.setAttribute("href", newHref);
         }
       });
 
@@ -60,9 +89,11 @@ function loadHeaderFooter() {
       const menu = document.getElementById("menu");
       const dropdowns = document.querySelectorAll(".dropdown > a");
 
-      hamburgerMenu.addEventListener("click", function () {
-        menu.classList.toggle("show");
-      });
+      if (hamburgerMenu && menu) {
+        hamburgerMenu.addEventListener("click", function () {
+          menu.classList.toggle("show");
+        });
+      }
 
       dropdowns.forEach(function (dropdown) {
         dropdown.addEventListener("click", function (e) {
@@ -84,10 +115,23 @@ function loadHeaderFooter() {
       document.getElementById("footer-container").innerHTML = data;
 
       // Ajustar caminhos de imagem no footer
-      document.querySelector(".footer-logo").src = basePath + "assets/Logo-Omnienviro-quantum-biotek-.jpg";
-      document.querySelector(".footer-social img[src*='facebook']").src = basePath + "icons/facebook.png";
-      document.querySelector(".footer-social img[src*='twitter']").src = basePath + "icons/twitter.png";
-      document.querySelector(".footer-social img[src*='instagram']").src = basePath + "icons/instagram.png";
+      const footerLogo = document.querySelector(".footer-logo");
+      const facebookIcon = document.querySelector(".footer-social img[src*='facebook']");
+      const twitterIcon = document.querySelector(".footer-social img[src*='twitter']");
+      const instagramIcon = document.querySelector(".footer-social img[src*='instagram']");
+      
+      if (footerLogo) {
+        footerLogo.src = basePath + "assets/Logo-Omnienviro-quantum-biotek-.jpg";
+      }
+      if (facebookIcon) {
+        facebookIcon.src = basePath + "icons/facebook.png";
+      }
+      if (twitterIcon) {
+        twitterIcon.src = basePath + "icons/twitter.png";
+      }
+      if (instagramIcon) {
+        instagramIcon.src = basePath + "icons/instagram.png";
+      }
     })
     .catch((error) => console.error("Error loading the footer:", error));
 }
