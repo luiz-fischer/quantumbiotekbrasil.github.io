@@ -20,7 +20,7 @@ function getBasePath() {
   // Conta quantas pastas precisamos subir
   let depth = 0;
   
-  // Se temos "setores", "empresa", "omniambiente", "produtos", "contato" no caminho, estamos em html/[pasta]/
+  // Se temos "setores", "empresa", "omniambiente", "produtos", "contato" no caminho, estamos em html/[pasta]/-
   const lastSegment = pathSegments[pathSegments.length - 1];
   if (["contato", "empresa", "omniambiente", "produtos", "setores"].includes(lastSegment)) {
     depth = 2; // html/pasta/ -> precisa subir 2 níveis
