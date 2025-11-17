@@ -125,6 +125,21 @@
           .then((response) => response.text())
           .then((html) => {
             document.querySelector(".portifolio").innerHTML = html;
+            
+            // IMPORTANTE: Ajustar caminhos de imagens e links
+            // O HTML carregado tem ../../../ (3 níveis) mas estamos em produtos.html (2 níveis)
+            // Precisamos mudar ../../../ para ../../
+            const portifolioDiv = document.querySelector(".portifolio");
+            
+            // Ajustar todas as imagens
+            portifolioDiv.querySelectorAll('img[src^="../../../"]').forEach(img => {
+              img.src = img.src.replace('../../../', '../../');
+            });
+            
+            // Ajustar todos os links (PDFs, etc)
+            portifolioDiv.querySelectorAll('a[href^="../../../"]').forEach(link => {
+              link.href = link.href.replace('../../../', '../../');
+            });
           })
           .catch((error) =>
             console.error("Failed to load the HTML file:", error)
