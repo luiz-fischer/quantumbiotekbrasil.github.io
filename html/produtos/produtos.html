@@ -131,14 +131,20 @@
             // Precisamos mudar ../../../ para ../../
             const portifolioDiv = document.querySelector(".portifolio");
             
-            // Ajustar todas as imagens
-            portifolioDiv.querySelectorAll('img[src^="../../../"]').forEach(img => {
-              img.src = img.src.replace('../../../', '../../');
+            // Ajustar todas as imagens - usar getAttribute/setAttribute para manter caminhos relativos
+            portifolioDiv.querySelectorAll('img').forEach(img => {
+              const src = img.getAttribute('src');
+              if (src && src.startsWith('../../../')) {
+                img.setAttribute('src', src.replace('../../../', '../../'));
+              }
             });
             
             // Ajustar todos os links (PDFs, etc)
-            portifolioDiv.querySelectorAll('a[href^="../../../"]').forEach(link => {
-              link.href = link.href.replace('../../../', '../../');
+            portifolioDiv.querySelectorAll('a').forEach(link => {
+              const href = link.getAttribute('href');
+              if (href && href.startsWith('../../../')) {
+                link.setAttribute('href', href.replace('../../../', '../../'));
+              }
             });
           })
           .catch((error) =>
