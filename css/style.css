@@ -652,7 +652,7 @@ html {
   position: relative;
   width: 100%;
   height: 55vh;
-  background: url("../../assets/Fondo-Agro-sddfvdfv.png")
+  background: url("../assets/Fondo-Agro-sddfvdfv.png")
     no-repeat center center/cover;
   background-attachment: fixed;
 }
@@ -700,7 +700,7 @@ html {
   position: relative;
   width: 100%;
   height: 55vh;
-  background: url("../../assets/cows-2021-10-04-20-54-22-utc.png")
+  background: url("../assets/cows-2021-10-04-20-54-22-utc.png")
     no-repeat center center/cover;
   background-attachment: fixed;
 }
@@ -748,7 +748,7 @@ html {
   position: relative;
   width: 100%;
   height: 55vh;
-  background: url("../../assets/Fondo-Industry.png")
+  background: url("../assets/Fondo-Industry.png")
     no-repeat center center/cover;
   background-attachment: fixed;
 }
@@ -797,7 +797,7 @@ html {
   position: relative;
   width: 100%;
   height: 55vh;
-  background: url("../../assets/Fondo-Salud-2.png")
+  background: url("../assets/Fondo-Salud-2.png")
     no-repeat center center/cover;
   background-attachment: fixed;
 }
@@ -847,7 +847,7 @@ html {
   position: relative;
   width: 100%;
   height: 55vh;
-  background: url("../../assets/Fondo-Hogar.png")
+  background: url("../assets/Fondo-Hogar.png")
     no-repeat center center/cover;
   background-attachment: fixed;
 }
@@ -896,7 +896,7 @@ html {
   position: relative;
   width: 100%;
   height: 55vh;
-  background: url("../../assets/Fondo-Piscinas-2.png")
+  background: url("../assets/Fondo-Piscinas-2.png")
     no-repeat center center/cover;
   background-attachment: fixed;
 }
@@ -946,7 +946,7 @@ html {
   position: relative;
   width: 100%;
   height: 55vh;
-  background: url("../../assets/Fondo-Hidrocarburos.png")
+  background: url("../assets/Fondo-Hidrocarburos.png")
     no-repeat center center/cover;
   background-attachment: fixed;
 }
@@ -997,7 +997,7 @@ html {
   position: relative;
   width: 100%;
   height: 55vh;
-  background: url("../../assets/Fondo-Bebidas-1.png")
+  background: url("../assets/Fondo-Bebidas-1.png")
     no-repeat center center/cover;
   background-attachment: fixed;
 }
@@ -1048,7 +1048,7 @@ html {
   position: relative;
   width: 100%;
   height: 55vh;
-  background: url("../../assets/Fondo-tratamiento-de-agua.png")
+  background: url("../assets/Fondo-tratamiento-de-agua.png")
     no-repeat center center/cover;
   background-attachment: fixed;
 }
@@ -1453,7 +1453,7 @@ footer {
   font-size: 1.4em;
   position: relative;
   overflow: hidden;
-  background: url("../../assets/brasil.png") no-repeat center center;
+  background: url("../assets/brasil.png") no-repeat center center;
   background-size: cover; /* Ajusta a imagem de fundo para cobrir todo o botão */
 }
 
@@ -1711,7 +1711,7 @@ footer {
   position: relative;
   width: 100%;
   height: 100vh;
-  background: url("../../assets/Naturaleza-quantum-biotek-agua-estructurada.jpg")
+  background: url("../assets/Naturaleza-quantum-biotek-agua-estructurada.jpg")
     no-repeat center center/cover;
   display: flex;
   align-items: center;
@@ -2047,7 +2047,7 @@ form button:hover {
   position: relative;
   width: 100%;
   height: 70vh;
-  background: url("../../assets/Naturaleza-quantum-biotek-agua-estructurada.jpg")
+  background: url("../assets/Naturaleza-quantum-biotek-agua-estructurada.jpg")
     no-repeat center center/cover;
   background-attachment: fixed;
 }
