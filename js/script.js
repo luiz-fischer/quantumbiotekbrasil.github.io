@@ -20,15 +20,20 @@ function getBasePath() {
   // Conta quantas pastas precisamos subir
   let depth = 0;
   
-  // Se temos "setores", "empresa", "omniambiente", "produtos", "contato" no caminho, estamos em html/[pasta]/-
   const lastSegment = pathSegments[pathSegments.length - 1];
-  if (["contato", "empresa", "omniambiente", "produtos", "setores"].includes(lastSegment)) {
-    depth = 2; // html/pasta/ -> precisa subir 2 níveis
-  } else if (pathSegments.length > 0 && pathSegments[pathSegments.length - 1] === "html") {
-    depth = 1; // html/ -> precisa subir 1 nível
-  } else if (pathSegments.length > 0 && pathSegments.some(seg => seg === "portifolio")) {
+  
+  // IMPORTANTE: Verificar portifolio PRIMEIRO (maior profundidade)
+  if (pathSegments.some(seg => seg === "portifolio")) {
     depth = 3; // html/produtos/portifolio/ -> precisa subir 3 níveis
-  } else {
+  } 
+  // Se temos "setores", "empresa", "omniambiente", "produtos", "contato" no caminho, estamos em html/[pasta]/
+  else if (["contato", "empresa", "omniambiente", "produtos", "setores"].includes(lastSegment)) {
+    depth = 2; // html/pasta/ -> precisa subir 2 níveis
+  } 
+  else if (pathSegments.length > 0 && lastSegment === "html") {
+    depth = 1; // html/ -> precisa subir 1 nível
+  } 
+  else {
     depth = 0; // raiz
   }
   
